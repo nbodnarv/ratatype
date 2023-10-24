@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-form label {
+	top: 50%;
+	left: 17px;
+	transform: translateY(-50%);
+	transition: all 0.3s;
+}
+
+.custom-form input {
+	padding: 16px 15px;
+	transition: all 0.3s;
+	position: relative;
+}
+
+.custom-form input:focus,
+.custom-form input:not(:placeholder-shown)  {
+	padding: 25px 15px 7px 15px;
+}
+
+.custom-form input:focus + label {
+	top: 21px;
+	font-size: 16px;
+}
+
+.custom-form input:not(:placeholder-shown) + label {
+	top: 21px;
+	font-size: 16px;
+}
+
+.custom-form .err {
+	margin-bottom: 2.5rem;
+}
+
+.custom-form .err input[type="email"] {
+	border-color: #FF3B30;
+}
+
+.err-message {
+	bottom: -27px;
+	left: 0;
+	transition: all .3s;
+}
+
+@media (min-width: 768px) {
+	.custom-form input {
+		padding: 20px 15px;
+	}
+
+	.custom-form input:focus,
+	.custom-form input:not(:placeholder-shown) {
+		padding: 31px 15px 9px 15px;
+	}
+}
